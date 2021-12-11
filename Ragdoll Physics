@@ -34,8 +34,8 @@ sec:Textbox("Music id here ----------------------------------------->", true, fu
 
 local ohNumber1 = 500000000 --Maxdistance
 local ohBoolean2 = true --looped
-local ohNumber3 = 10 --emitter thing idk
-local ohNumber4 = 5 --volume
+local ohNumber3 = 500000000 --emitter thing idk
+local ohNumber4 = 500000000 --volume
 local ohString5 = "http://www.roblox.com/asset/?id="..id
 local ohNumber6 = 0 --animation
  
@@ -51,7 +51,7 @@ sec:Button("Btools", function()
 local Lighting = game:GetService("Lighting");
 local ReplicatedStorage = game:GetService("ReplicatedStorage");
 local Players = game:GetService("Players");
-local Remote = ReplicatedStorage:FindFirstChild("DestroyObj");
+local Remote = ReplicatedStorage:FindFirstChild("Limb");
 
 local Tool = Instance.new("Tool", Players.LocalPlayer.Backpack);
 Tool.RequiresHandle = false
@@ -71,17 +71,56 @@ end)
 
 
 
-local tab2 = win:Tab("trolling")
+---------------------------------------------------
+local tab2 = win:Tab("Teleport")
 
-local sec = tab2:Section("trolling")
+local sec = tab2:Section("Teleport")
+sec:Button("Shop", function()
+   SolarisLib:Notification("Teleported", "Teleported to shop!")
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4693.19921875, 462.31384277344, -416.27380371094)
+end)
+
+sec:Button("Plane", function()
+   SolarisLib:Notification("Teleported", "Teleported to Plane!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4516.9477539062, 2522.5163574219, -331.29354858398)
+end)
+
+sec:Button("Gravity Chamber", function()
+   SolarisLib:Notification("Teleported", "Teleported to Gravity Chamber!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4385.9282226562, -146.18411254883, -233.57160949707)
+end)
+
+sec:Button("Building 1", function()
+   SolarisLib:Notification("Teleported", "Teleported to Building 1!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4415.8798828125, 1536.4423828125, -503.91638183594)
+end)
+
+sec:Button("Building 2", function()
+   SolarisLib:Notification("Teleported", "Teleported to Building 2!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4689.1831054688, 1060.3642578125, -489.24703979492)
+end)
+
+sec:Button("inside building 1", function()
+   SolarisLib:Notification("Teleported", "Teleported  inside building 1!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4425.71484375, 1491.6936035156, -506.42279052734)
+end)
+
+sec:Button("code door", function()
+   SolarisLib:Notification("Teleported", "Teleported  to Code door!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4421.3764648438, 782.51708984375, -500.10330200195)
+end)
+
+sec:Button("Middle", function()
+   SolarisLib:Notification("Teleported", "Teleported  to middle!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4557.1982421875, 462.56744384766, -408.72644042969)
+end)
 
 
-
-
+--------------------------------------------------------
 
 local tab3 = win:Tab("Player")
 
-local sec3 = tab2:Section("Player")
+local sec = tab3:Section("Player")
 
 local slider = sec:Slider("Walkspeed", 0,500,16,1,"Slider", function(t)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t
