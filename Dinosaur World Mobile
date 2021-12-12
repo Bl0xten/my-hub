@@ -1,0 +1,101 @@
+local SolarisLib = loadstring(game:HttpGet("https://solarishub.dev/SolarisLib.lua"))()
+
+--[[SolarisLib:New({
+   Name - Title of the UI <string>
+   FolderToSave - Name of the folder where the UI files will be stored <string>
+})]]
+local win = SolarisLib:New({
+   Name = "Dinosaur World Mobile",
+   FolderToSave = "SolarisLibStuff"
+})
+
+--win:Tab(title <string>)
+local tab = win:Tab("Main")
+
+--tab:Section(title <string>)
+local sec = tab:Section("Elements")
+
+local dropdown = sec:Dropdown("Carnivore", {"Alectrosausrus1","Lythronax1","Albertosaurus1","Daspletosaurus1","Zhuchengtyrannus1","Eustreptospondylus1","Eocarcharia1","Allosaurus1","Kelmayisaurus1","Acrocanthosaurus1","Coelophysis1","Dilophosaurus1","Carcharodontosaurus1"},"","Dropdown", function(t)
+local Group = "Carnivore1"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local dropdown = sec:Dropdown("Omnivore", {"Citipati1"},"","Dropdown", function(t)
+local Group = "Omnivore1"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local dropdown = sec:Dropdown("Group", {"Ornitholestes1","Velociraptor1","Herrerasaurus2","Herrerasaurus1","Carnotaurus1","Parasaurolophus2","Styracosaurus2","Zuniceratops2"},"","Dropdown", function(t)
+local Group = "Group"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local dropdown = sec:Dropdown("Herbivore", {"Zuniceratops1","Styracosaurus1","Pachyrhinosaurus1","Pentaceratops1","Triceratops1","Segnosaurus1","Nothronychus1","Stegosaurus1","Pinacosaurus1","Sauropelta1","Borealopelta1","Edmontonia1","Euoplocephalus1"},"","Dropdown", function(t)
+local Group = "Herbivore1"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local dropdown = sec:Dropdown("Herbivore", {"Laeaellynasaura1","Tethyshadros1","Parasaurolophus1","Magyarosaurus1","Aegyptosaurus1","Camarasaurus1","Giraffatitan1"},"","Dropdown", function(t)
+local Group = "Herbivore2"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local dropdown = sec:Dropdown("Birds", {"Dimorphodon1","Rhamphorhynchus1","Dsungaripterus1","Pteranodon1","Hatzegopteryx1"},"","Dropdown", function(t)
+local Group = "Birds"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local dropdown = sec:Dropdown("Maritime", {"Platecarpus1","Hydrotherosaurus1","Mawsonia1"},"","Dropdown", function(t)
+local Group = "Maritime"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local dropdown = sec:Dropdown("Idk", {"Plant"},"","Dropdown", function(t)
+local Group = "R15"
+local Name = t
+
+game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
+end)
+
+local label = sec:Label("To order use gamepass dinosaur you need pal hair")
+
+sec:Button("Get pal hair here (link)", function()
+   SolarisLib:Notification("copied", "successfully copied to clipboard.")
+ setclipboard('https://www.roblox.com/catalog/63690008/Pal-Hair')
+end)
+
+
+local dropdown = sec:Dropdown("Gamepass", {"Dakotaraptor1","Majungasaurus1","Megalosaurus1","Baryonyx1","Mapusaurus1","Tyrannosaurus1","Xiphactinus1","Quetzalcoatlus1","Spinosaurus1","Sarcosuchus1","Shunosaurus1","Ankylosaurus1","Diplodocus1"},"","Dropdown", function(t)
+local args = {
+    [1] = "Gamepass",
+    [2] = t,
+    [3] = 63690008 --Put any id just make sure you have it
+}
+
+game:GetService("ReplicatedStorage").SpawnEventsGamepass.Standard:FireServer(unpack(args))
+end)
+
+--win:Tab(title <string>)
+local tab2 = win:Tab("Credits")
+
+--tab:Section(title <string>)
+local sec = tab2:Section("Elements")
+local label = sec:Label("Credits!!")
+local label = sec:Label("imanooblol228")
+local label = sec:Label("His Discord (popcorm#4446)")
+local label = sec:Label("Used libarary/ui = Solaris")
+
