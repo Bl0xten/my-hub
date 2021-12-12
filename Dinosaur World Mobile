@@ -66,19 +66,15 @@ local Name = t
 game:GetService("ReplicatedStorage").SpawnEvents.SpawnEvent:FireServer(Group, Name)
 end)
 
-local label = sec:Label("To order use gamepass dinosaur you need pal hair")
+local label = sec:Label("To order use gamepass dinosaur you need put gamepass id at line line 77 at the script if you dont know")
 
-sec:Button("Get pal hair here (link)", function()
-   SolarisLib:Notification("copied", "successfully copied to clipboard.")
- setclipboard('https://www.roblox.com/catalog/63690008/Pal-Hair')
-end)
 
 
 local dropdown = sec:Dropdown("Gamepass", {"Dakotaraptor1","Majungasaurus1","Megalosaurus1","Baryonyx1","Mapusaurus1","Tyrannosaurus1","Xiphactinus1","Quetzalcoatlus1","Spinosaurus1","Sarcosuchus1","Shunosaurus1","Ankylosaurus1","Diplodocus1"},"","Dropdown", function(t)
 local args = {
     [1] = "Gamepass",
     [2] = t,
-    [3] = 63690008 --Put any id just make sure you have it
+    [3] = 13716382 --Put any id gamepass id here that you have it should work lol
 }
 
 game:GetService("ReplicatedStorage").SpawnEventsGamepass.Standard:FireServer(unpack(args))
