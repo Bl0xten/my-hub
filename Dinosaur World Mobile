@@ -1,18 +1,13 @@
 local SolarisLib = loadstring(game:HttpGet("https://solarishub.dev/SolarisLib.lua"))()
 
---[[SolarisLib:New({
-   Name - Title of the UI <string>
-   FolderToSave - Name of the folder where the UI files will be stored <string>
-})]]
+
 local win = SolarisLib:New({
    Name = "Dinosaur World Mobile",
    FolderToSave = "SolarisLibStuff"
 })
 
---win:Tab(title <string>)
 local tab = win:Tab("Main")
 
---tab:Section(title <string>)
 local sec = tab:Section("Elements")
 
 local dropdown = sec:Dropdown("Carnivore", {"Alectrosausrus1","Lythronax1","Albertosaurus1","Daspletosaurus1","Zhuchengtyrannus1","Eustreptospondylus1","Eocarcharia1","Allosaurus1","Kelmayisaurus1","Acrocanthosaurus1","Coelophysis1","Dilophosaurus1","Carcharodontosaurus1"},"","Dropdown", function(t)
